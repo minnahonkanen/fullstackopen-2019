@@ -1,0 +1,38 @@
+title 0.6 uusi muistiinpano
+
+note over selain:
+selain lähettää palvelimelle POST-tyyppisen pyynnön,
+joka sisältää json-muodossa olevan uuden muistiinpanon
+end note
+
+note over selain
+selaimen lataama js-koodi:
+- hakee sivulta lomake-elementin ja luo sille tapahtumankäsittelijän, joka
+aktivoituu, kun lomake lähetetään
+- estää lomakkeen tietojen lähetettämisen selaimen normaalin lähetysmekanismin avulla
+- luo muistiinpanon
+- piirtää muistiinpanojen listan uudelleen
+- lähettää sen palvelimelle
+end note
+
+note over palvelin:
+palvelin tietää pyyntöön liitetyn Content-type
+headerin perusteella, että pyynnön mukana
+tuleva data on json-muotoista
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over palvelin:
+palvelin vastaa pyyntöön HTTP-statuskoodilla 201
+eli created
+end note
+
+palvelin-->selain: HTTP status 201
+
+note over selain:
+selain pysyy samalla sivulla, eikä muita
+HTTP-pyyntöjä suoriteta
+end note
+
+
