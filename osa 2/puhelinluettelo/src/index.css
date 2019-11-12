@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  margin: 3px;
+  border-radius: 3px;
+}
+
+button {
+  border-radius: 3px;
+  background-color: lightgrey;
+}
+
+button:hover {
+  background-color: lightslategray;
+  color: white;
+  transition: 0.6s;
+}
+
+.content {
+  padding: 1em;
+}
+
+.message {
+  width: 300px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  transition: 1s;
+}
+
+.spot {
+  height: 20px;
+}
+
+.names {
+  padding: 5px;
+}
